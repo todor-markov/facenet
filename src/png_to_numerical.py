@@ -11,7 +11,7 @@ if __name__ == "__main__":
 	for dr in glob.glob(data_folder + "*"):
 		print dr
 		for path in glob.glob(dr + "/*.png"):
-			data_array.append(misc.imread(path))
+			data_array.append(misc.imread(path,mode='RGB'))
 			labels_array.append(class_number)
 		class_number += 1
 	data_array = np.array(data_array)
