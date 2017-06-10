@@ -15,14 +15,18 @@ I tested two groups of models. The first was simple, shallow CNNs, used as a bas
 The architecture for the two simple models was as follows (nonlinearity used is ReLU, after all Convolutional and fully connected layers (except the FC layer immediately before softmax)):
 
 Model S1:
+
 Convolution - Batch Normalization - Max Pool - Convolution - Batch Normalization - Max Pool - Fully Connected - Fully Connected - Softmax
+
 Both convolutions had 64 filters, kernel size 5, stride 2
 The Fully connected layer had 128 units (the second FC layer had 7 units, since we have 7 classes)
 Training accuracy - 93% (training was done for 7 epochs, so training accuracy might have gone higher with more training)
 Validation accuracy - 23.4%
 
 Model S2:
+
 Convolution - Batch Normalization - Max Pool - Fully Connected - Fully Connected - Softmax
+
 Convolution had 64 filters, kernel size 9, stride 4
 Fully connected layer had 128 units
 Training accuracy - 93.9% (again with 7 epochs of training)
